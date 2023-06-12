@@ -6,16 +6,15 @@ public class Card {
 	private Suit suit;
 	private Rank rank;
 
-	
 	public Card(Suit suit, Rank rank) {
 		this.suit = suit;
 		this.rank = rank;
-		
-	}
-	public int getValue(int value) {
-		return rank.getValue();
+
 	}
 
+	public int getValue() {
+		return rank.getValue();
+	}
 
 	@Override
 	public int hashCode() {
@@ -33,6 +32,7 @@ public class Card {
 		Card other = (Card) obj;
 		return Objects.equals(rank, other.rank) && Objects.equals(suit, other.suit);
 	}
+
 	@Override
 	public String toString() {
 		return rank + " of " + suit;

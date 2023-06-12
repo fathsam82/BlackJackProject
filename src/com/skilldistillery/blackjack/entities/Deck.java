@@ -14,12 +14,9 @@ public class Deck {
 	public void createDeckOfCards() {
 		Suit[] suits = Suit.values();
 		Rank[] ranks = Rank.values();
-		// for each suit(dia, heart, clubs, spade)
-		// create 13 ranked (2-> Ace)
-		// create a Card
 
-		for (Suit suit : suits) { // 4 suits
-			for (Rank rank : ranks) { // 13 ranks
+		for (Suit suit : suits) {
+			for (Rank rank : ranks) {
 				Card aCard = new Card(suit, rank);
 				deck.add(aCard);
 
@@ -34,9 +31,12 @@ public class Deck {
 
 	public Card dealCard() {
 		Card aCard = null;
-		//remove a card from the deck
 		aCard = deck.remove(0);
 		return aCard;
+
+	}
+
+	public void dealCardToHand(Hand hand) {
 
 	}
 

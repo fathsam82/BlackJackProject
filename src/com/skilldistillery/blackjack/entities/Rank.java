@@ -12,11 +12,11 @@ public enum Rank {
 
 	public String toString() {
 		return value + "";
-		
+
 	}
 
 	public int getValue() {
 		return value;
 	}
-	
+
 }
